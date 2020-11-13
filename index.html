@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>Abekus</title>
+    <!-- add font awesome for icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- bootstrap for defoult style and column  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom style  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .category-card:hover {
+            background-color: floralwhite;
+            cursor: pointer;
+            box-shadow:rgb(129, 110, 110)
+        }
+        .category-foot:hover {
+            background-color: floralwhite;
+            cursor: pointer;
+            box-shadow: rgb(129, 110, 110)
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <section class="main-panel">
+            <!-- header  start-->
+            <header class="header">
+                <div class="head-menu">
+                    <button class="btn btn-border" style="display: none;">
+                        <svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+                    </button>
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                    <div class="appbar__content__data__text px-3">
+                        <p>Score</p>
+                        <h3> 0</h3>
+                    </div>
+                    <div class="appbar__content__data__text px-3">
+                        <p>Credits</p>
+                        <h3>50</h3>
+                    </div>
+                    <div class="appbar__notification px-3">
+                        <a href="javascript:void(0)" class="notification">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="appbar__login px-3">
+                        <a href="javascript:void(0)" class="notification">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                       
+                </div>
+               
+            </header>
+            <!-- header end  -->
+            <!-- sidebar start -->
+            <div class="sidebar">
+                <div class="sidebar-inner">
+                    <div class="logo">
+                        <img src="images/logo.png" class="img-fluid big-logo" width="120" alt="">
+                        <img src="images/logo-small.png" class="img-fluid small-logo" width="25" alt="" style="display: none;">
+                        <button class="btn btn-border" id="ham-menu">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <hr>
+                    <!-- drawer start  -->
+                    <div class="select-panel">
+                        <div class="drawer">
+                            <a href="javascript:void(0)">
+                                <p>Computer Science......</p>
+                                <svg class="" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- drawer end  -->
+                    <!-- sidebar menu start  -->
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li class="active">
+                                <a href="javascript:void(0)">
+                                    <div class="icon">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zM5 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>
+                                    </div>
+                                    <div class="content-text">
+                                        <span>Play</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="icon">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path></svg>
+                                    </div>
+                                    <div class="content-text">
+                                        <span>Leaderboard</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="icon">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"></path></svg>
+                                    </div>
+                                    <div class="content-text">
+                                        <span>Questions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="icon">
+                                        <i class="fas fa-history"></i>
+                                    </div>
+                                    <div class="content-text">
+                                        <span>History</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="content-text">
+                                        <span>Review</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="icon">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="content-text">
+                                        <span>Reported</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="icon">
+                                        <i class="fas fa-qrcode"></i>
+                                    </div>
+                                    <div class="content-text">
+                                        <span>Categories</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="content-text">
+                                        <span>Referral</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- sidebar menu end  -->
+                </div>
+            </div>
+            <!-- sidebar end -->
+            <!-- main layout start  -->
+            <div class="layout">
+                <div class="wrapper">
+                    <!-- title start  -->
+                    <div class="title">
+                        <h1>Category</h1>
+                    </div>
+                    <!-- title end  -->
+                    <!-- category list start  -->
+                    <div class="category-list">
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>AWS</h3>
+                                    <p>Amazon Web Services</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/379</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/AWS_AWS.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px; color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>Bash Scripting & Commands</h3>
+                                    <p>Bash Scripting & Commands</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/338</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/bash_tag_image.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>Blockchain</h3>
+                                    <p>Blockchain Technology</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/189</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/Blockchain_Bloack-Chain.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>Bootstrap</h3>
+                                    <p>Bootstrap Framework Questions</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/368</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/bootstrap_tag_image.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>C#</h3>
+                                    <p>C Sharp Programming Language</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/62</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/C-SHARP.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>C & C++</h3>
+                                    <p>The C & C++ Programming Language</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/5110</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/c_c%2B%2B_tag_image.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>HTML & CSS</h3>
+                                    <p>HTML and CSS</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/1312</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/HTML-%26-CSS.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>Java</h3>
+                                    <p>Java Language</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/37</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/java_tag_image.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>Javascript</h3>
+                                    <p>The Javascript Programming Language</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/2551</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/JAVASCRIPT.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>Machine Learning</h3>
+                                    <p>Machine Learning Questions</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/46</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/Machine%20Learning_Machine-Learning.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>Networking</h3>
+                                    <p>Computer Networking</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/516</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/Networking_Computer_Networking.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-head">
+                                <div class="head-left">
+                                    <h3>Python</h3>
+                                    <p>The Python Programming Language</p>
+                                    <div class="list">
+                                        <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"></path></svg>
+                                        <span>0/95</span>
+                                    </div>
+                                </div>
+                                <div class="head-right">
+                                    <img src="https://s3-us-west-2.amazonaws.com/wikasta.projectq/PYTHON.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="category-foot">
+                                <button class="btn btn-primary">
+                                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="margin-right: 5px;color:mediumslateblue"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <span style="color:mediumslateblue">Start Quiz</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- category list end  -->
+                    <footer>
+                        <div class="footer-inner">
+                            <p>Need help? Reach us at <a href="mailto:hello@abekus.co">hello@abekus.co</a></p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <!-- main layout end  -->
+        </section>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
